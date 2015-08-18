@@ -9,6 +9,10 @@ namespace SarwatchASPMVC
     {
         private Repository()
         {
+            
+        }
+        public static Repository getInstance()
+        {
 
         }
     }
