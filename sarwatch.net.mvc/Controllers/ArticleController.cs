@@ -17,7 +17,7 @@ namespace SarwatchASPMVC.Controllers
         }
         public ActionResult Create()
         {
-
+            return View();
         }
         [HttpPost]
         public ActionResult Create(Model model)
