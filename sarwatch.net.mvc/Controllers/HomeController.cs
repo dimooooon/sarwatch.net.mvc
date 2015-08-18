@@ -13,7 +13,7 @@ namespace SarwatchASPMVC.Controllers
 
         public ActionResult Index()
         {
-            //awebstudio_watchEntities dbContext = new awebstudio_watchEntities();
+            awebstudio_watchEntities dbContext = new awebstudio_watchEntities();
             return View();
 
         }
