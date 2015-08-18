@@ -24,6 +24,9 @@ namespace SarwatchASPMVC.Controllers
         {
             return View();
         }
-
+        public ActionResult Details(int id)
+        {
+            return View();
+        }
     }
 }
