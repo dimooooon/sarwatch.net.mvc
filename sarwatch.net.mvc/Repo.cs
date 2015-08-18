@@ -5,13 +5,13 @@ using System.Web;
 
 namespace SarwatchASPMVC
 {
-    public class Repository
+    public class Repo
     {
-        private Repository()
+        private Repo()
         {
             
         }
-        public static Repository getInstance()
+        public static Repo getInstance()
         {
 
         }
