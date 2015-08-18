@@ -15,6 +15,10 @@ namespace SarwatchASPMVC.Controllers
         {
             return View();
         }
+        public ActionResult Create()
+        {
+
+        }
 
     }
 }
