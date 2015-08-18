@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище awebstudio_watchModel" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "awebstudio_watch.dbo.article" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+  <EntityType Name="article">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="title" />
+      <PropertyRef Name="title_in_menu" />
+      <PropertyRef Name="chpu" />
+      <PropertyRef Name="main" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="id_section" Type="int" />
+    <Property Name="id_sub_section" Type="int" />
+    <Property Name="title" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="title_in_menu" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="text" Type="text" />
+    <Property Name="order" Type="int" />
+    <Property Name="last_modified" Type="int" />
+    <Property Name="meta_title" Type="varchar" MaxLength="255" />
+    <Property Name="meta_keywords" Type="varchar" MaxLength="255" />
+    <Property Name="meta_description" Type="text" />
+    <Property Name="hidden" Type="smallint" />
+    <Property Name="chpu" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="main" Type="smallint" Nullable="false" />
+  </EntityType>
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "awebstudio_watch.dbo.categories" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+  <EntityType Name="categories">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="title" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="title" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "awebstudio_watch.dbo.images" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+  <EntityType Name="images">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="productID" />
+      <PropertyRef Name="main" />
+      <PropertyRef Name="order" />
+      <PropertyRef Name="alt" />
+      <PropertyRef Name="title" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="productID" Type="int" Nullable="false" />
+    <Property Name="url" Type="varchar" MaxLength="255" />
+    <Property Name="main" Type="smallint" Nullable="false" />
+    <Property Name="order" Type="int" Nullable="false" />
+    <Property Name="alt" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="title" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "awebstudio_watch.dbo.products" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+  <EntityType Name="products">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="categoryID" />
+      <PropertyRef Name="title" />
+      <PropertyRef Name="gender" />
+      <PropertyRef Name="views" />
+      <PropertyRef Name="hidden" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="categoryID" Type="int" Nullable="false" />
+    <Property Name="title" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="price" Type="int" />
+    <Property Name="gender" Type="int" Nullable="false" />
+    <Property Name="discount" Type="int" />
+    <Property Name="description" Type="text" />
+    <Property Name="chpu" Type="varchar" MaxLength="255" />
+    <Property Name="meta_title" Type="varchar" MaxLength="255" />
+    <Property Name="meta_keywords" Type="varchar" MaxLength="255" />
+    <Property Name="meta_description" Type="text" />
+    <Property Name="last_modified" Type="int" />
+    <Property Name="views" Type="int" Nullable="false" />
+    <Property Name="hidden" Type="smallint" Nullable="false" />
+  </EntityType>
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "awebstudio_watch.dbo.section" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+  <EntityType Name="section">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="title" />
+      <PropertyRef Name="title_in_menu" />
+      <PropertyRef Name="chpu" />
+      <PropertyRef Name="main" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="title" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="title_in_menu" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="text" Type="text" />
+    <Property Name="order" Type="int" />
+    <Property Name="last_modified" Type="int" />
+    <Property Name="meta_title" Type="varchar" MaxLength="255" />
+    <Property Name="meta_keywords" Type="varchar" MaxLength="255" />
+    <Property Name="meta_description" Type="text" />
+    <Property Name="hidden" Type="smallint" />
+    <Property Name="chpu" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="main" Type="smallint" Nullable="false" />
+  </EntityType>
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "awebstudio_watch.dbo.store" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+  <EntityType Name="store">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="productID" />
+      <PropertyRef Name="color" />
+      <PropertyRef Name="strap" />
+      <PropertyRef Name="status" />
+      <PropertyRef Name="arrival_day" />
+      <PropertyRef Name="arrival_month" />
+      <PropertyRef Name="arrival_year" />
+      <PropertyRef Name="defect" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="productID" Type="int" Nullable="false" />
+    <Property Name="quantity" Type="int" />
+    <Property Name="color" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="strap" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="status" Type="int" Nullable="false" />
+    <Property Name="arrival_day" Type="int" Nullable="false" />
+    <Property Name="arrival_month" Type="int" Nullable="false" />
+    <Property Name="arrival_year" Type="int" Nullable="false" />
+    <Property Name="defect" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "awebstudio_watch.dbo.sub_section" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+  <EntityType Name="sub_section">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="title" />
+      <PropertyRef Name="title_in_menu" />
+      <PropertyRef Name="chpu" />
+      <PropertyRef Name="main" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="id_section" Type="int" />
+    <Property Name="title" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="title_in_menu" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="text" Type="text" />
+    <Property Name="order" Type="int" />
+    <Property Name="last_modified" Type="int" />
+    <Property Name="meta_title" Type="varchar" MaxLength="255" />
+    <Property Name="meta_keywords" Type="varchar" MaxLength="255" />
+    <Property Name="meta_description" Type="text" />
+    <Property Name="hidden" Type="smallint" />
+    <Property Name="chpu" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="main" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="Хранилище awebstudio_watchModelContainer">
+    <EntitySet Name="article" EntityType="Self.article" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[article].[id] AS [id], 
+[article].[id_section] AS [id_section], 
+[article].[id_sub_section] AS [id_sub_section], 
+[article].[title] AS [title], 
+[article].[title_in_menu] AS [title_in_menu], 
+[article].[text] AS [text], 
+[article].[order] AS [order], 
+[article].[last_modified] AS [last_modified], 
+[article].[meta_title] AS [meta_title], 
+[article].[meta_keywords] AS [meta_keywords], 
+[article].[meta_description] AS [meta_description], 
+[article].[hidden] AS [hidden], 
+[article].[chpu] AS [chpu], 
+[article].[main] AS [main]
+FROM [dbo].[article] AS [article]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="categories" EntityType="Self.categories" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[categories].[ID] AS [ID], 
+[categories].[title] AS [title]
+FROM [dbo].[categories] AS [categories]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="images" EntityType="Self.images" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[images].[ID] AS [ID], 
+[images].[productID] AS [productID], 
+[images].[url] AS [url], 
+[images].[main] AS [main], 
+[images].[order] AS [order], 
+[images].[alt] AS [alt], 
+[images].[title] AS [title]
+FROM [dbo].[images] AS [images]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="products" EntityType="Self.products" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[products].[ID] AS [ID], 
+[products].[categoryID] AS [categoryID], 
+[products].[title] AS [title], 
+[products].[price] AS [price], 
+[products].[gender] AS [gender], 
+[products].[discount] AS [discount], 
+[products].[description] AS [description], 
+[products].[chpu] AS [chpu], 
+[products].[meta_title] AS [meta_title], 
+[products].[meta_keywords] AS [meta_keywords], 
+[products].[meta_description] AS [meta_description], 
+[products].[last_modified] AS [last_modified], 
+[products].[views] AS [views], 
+[products].[hidden] AS [hidden]
+FROM [dbo].[products] AS [products]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="section" EntityType="Self.section" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[section].[id] AS [id], 
+[section].[title] AS [title], 
+[section].[title_in_menu] AS [title_in_menu], 
+[section].[text] AS [text], 
+[section].[order] AS [order], 
+[section].[last_modified] AS [last_modified], 
+[section].[meta_title] AS [meta_title], 
+[section].[meta_keywords] AS [meta_keywords], 
+[section].[meta_description] AS [meta_description], 
+[section].[hidden] AS [hidden], 
+[section].[chpu] AS [chpu], 
+[section].[main] AS [main]
+FROM [dbo].[section] AS [section]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="store" EntityType="Self.store" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[store].[ID] AS [ID], 
+[store].[productID] AS [productID], 
+[store].[quantity] AS [quantity], 
+[store].[color] AS [color], 
+[store].[strap] AS [strap], 
+[store].[status] AS [status], 
+[store].[arrival_day] AS [arrival_day], 
+[store].[arrival_month] AS [arrival_month], 
+[store].[arrival_year] AS [arrival_year], 
+[store].[defect] AS [defect]
+FROM [dbo].[store] AS [store]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="sub_section" EntityType="Self.sub_section" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[sub_section].[id] AS [id], 
+[sub_section].[id_section] AS [id_section], 
+[sub_section].[title] AS [title], 
+[sub_section].[title_in_menu] AS [title_in_menu], 
+[sub_section].[text] AS [text], 
+[sub_section].[order] AS [order], 
+[sub_section].[last_modified] AS [last_modified], 
+[sub_section].[meta_title] AS [meta_title], 
+[sub_section].[meta_keywords] AS [meta_keywords], 
+[sub_section].[meta_description] AS [meta_description], 
+[sub_section].[hidden] AS [hidden], 
+[sub_section].[chpu] AS [chpu], 
+[sub_section].[main] AS [main]
+FROM [dbo].[sub_section] AS [sub_section]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

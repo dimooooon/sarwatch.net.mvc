@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="awebstudio_watchModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="article">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="title" />
+      <PropertyRef Name="title_in_menu" />
+      <PropertyRef Name="chpu" />
+      <PropertyRef Name="main" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="id_section" Type="Int32" />
+    <Property Name="id_sub_section" Type="Int32" />
+    <Property Name="title" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="title_in_menu" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="text" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="order" Type="Int32" />
+    <Property Name="last_modified" Type="Int32" />
+    <Property Name="meta_title" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="meta_keywords" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="meta_description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="hidden" Type="Int16" />
+    <Property Name="chpu" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="main" Type="Int16" Nullable="false" />
+  </EntityType>
+  <EntityType Name="category">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="title" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="title" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="image">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="productID" />
+      <PropertyRef Name="main" />
+      <PropertyRef Name="order" />
+      <PropertyRef Name="alt" />
+      <PropertyRef Name="title" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="productID" Type="Int32" Nullable="false" />
+    <Property Name="url" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="main" Type="Int16" Nullable="false" />
+    <Property Name="order" Type="Int32" Nullable="false" />
+    <Property Name="alt" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="title" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="product">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="categoryID" />
+      <PropertyRef Name="title" />
+      <PropertyRef Name="gender" />
+      <PropertyRef Name="views" />
+      <PropertyRef Name="hidden" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="categoryID" Type="Int32" Nullable="false" />
+    <Property Name="title" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="price" Type="Int32" />
+    <Property Name="gender" Type="Int32" Nullable="false" />
+    <Property Name="discount" Type="Int32" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="chpu" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="meta_title" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="meta_keywords" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="meta_description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="last_modified" Type="Int32" />
+    <Property Name="views" Type="Int32" Nullable="false" />
+    <Property Name="hidden" Type="Int16" Nullable="false" />
+  </EntityType>
+  <EntityType Name="section">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="title" />
+      <PropertyRef Name="title_in_menu" />
+      <PropertyRef Name="chpu" />
+      <PropertyRef Name="main" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="title" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="title_in_menu" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="text" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="order" Type="Int32" />
+    <Property Name="last_modified" Type="Int32" />
+    <Property Name="meta_title" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="meta_keywords" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="meta_description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="hidden" Type="Int16" />
+    <Property Name="chpu" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="main" Type="Int16" Nullable="false" />
+  </EntityType>
+  <EntityType Name="store">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="productID" />
+      <PropertyRef Name="color" />
+      <PropertyRef Name="strap" />
+      <PropertyRef Name="status" />
+      <PropertyRef Name="arrival_day" />
+      <PropertyRef Name="arrival_month" />
+      <PropertyRef Name="arrival_year" />
+      <PropertyRef Name="defect" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="productID" Type="Int32" Nullable="false" />
+    <Property Name="quantity" Type="Int32" />
+    <Property Name="color" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="strap" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="status" Type="Int32" Nullable="false" />
+    <Property Name="arrival_day" Type="Int32" Nullable="false" />
+    <Property Name="arrival_month" Type="Int32" Nullable="false" />
+    <Property Name="arrival_year" Type="Int32" Nullable="false" />
+    <Property Name="defect" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sub_section">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="title" />
+      <PropertyRef Name="title_in_menu" />
+      <PropertyRef Name="chpu" />
+      <PropertyRef Name="main" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="id_section" Type="Int32" />
+    <Property Name="title" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="title_in_menu" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="text" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="order" Type="Int32" />
+    <Property Name="last_modified" Type="Int32" />
+    <Property Name="meta_title" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="meta_keywords" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="meta_description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="hidden" Type="Int16" />
+    <Property Name="chpu" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="main" Type="Int16" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="awebstudio_watchEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="articles" EntityType="Self.article" />
+    <EntitySet Name="categories" EntityType="Self.category" />
+    <EntitySet Name="images" EntityType="Self.image" />
+    <EntitySet Name="products" EntityType="Self.product" />
+    <EntitySet Name="sections" EntityType="Self.section" />
+    <EntitySet Name="stores" EntityType="Self.store" />
+    <EntitySet Name="sub_section" EntityType="Self.sub_section" />
+  </EntityContainer>
+</Schema>

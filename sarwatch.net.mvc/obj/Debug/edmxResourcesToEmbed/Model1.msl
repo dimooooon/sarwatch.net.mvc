@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище awebstudio_watchModelContainer" CdmEntityContainer="awebstudio_watchEntities">
+    <EntitySetMapping Name="articles">
+      <EntityTypeMapping TypeName="awebstudio_watchModel.article">
+        <MappingFragment StoreEntitySet="article">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id_section" ColumnName="id_section" />
+          <ScalarProperty Name="id_sub_section" ColumnName="id_sub_section" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="title_in_menu" ColumnName="title_in_menu" />
+          <ScalarProperty Name="text" ColumnName="text" />
+          <ScalarProperty Name="order" ColumnName="order" />
+          <ScalarProperty Name="last_modified" ColumnName="last_modified" />
+          <ScalarProperty Name="meta_title" ColumnName="meta_title" />
+          <ScalarProperty Name="meta_keywords" ColumnName="meta_keywords" />
+          <ScalarProperty Name="meta_description" ColumnName="meta_description" />
+          <ScalarProperty Name="hidden" ColumnName="hidden" />
+          <ScalarProperty Name="chpu" ColumnName="chpu" />
+          <ScalarProperty Name="main" ColumnName="main" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="categories">
+      <EntityTypeMapping TypeName="awebstudio_watchModel.category">
+        <MappingFragment StoreEntitySet="categories">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="title" ColumnName="title" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="images">
+      <EntityTypeMapping TypeName="awebstudio_watchModel.image">
+        <MappingFragment StoreEntitySet="images">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="productID" ColumnName="productID" />
+          <ScalarProperty Name="url" ColumnName="url" />
+          <ScalarProperty Name="main" ColumnName="main" />
+          <ScalarProperty Name="order" ColumnName="order" />
+          <ScalarProperty Name="alt" ColumnName="alt" />
+          <ScalarProperty Name="title" ColumnName="title" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="products">
+      <EntityTypeMapping TypeName="awebstudio_watchModel.product">
+        <MappingFragment StoreEntitySet="products">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="categoryID" ColumnName="categoryID" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="discount" ColumnName="discount" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="chpu" ColumnName="chpu" />
+          <ScalarProperty Name="meta_title" ColumnName="meta_title" />
+          <ScalarProperty Name="meta_keywords" ColumnName="meta_keywords" />
+          <ScalarProperty Name="meta_description" ColumnName="meta_description" />
+          <ScalarProperty Name="last_modified" ColumnName="last_modified" />
+          <ScalarProperty Name="views" ColumnName="views" />
+          <ScalarProperty Name="hidden" ColumnName="hidden" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sections">
+      <EntityTypeMapping TypeName="awebstudio_watchModel.section">
+        <MappingFragment StoreEntitySet="section">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="title_in_menu" ColumnName="title_in_menu" />
+          <ScalarProperty Name="text" ColumnName="text" />
+          <ScalarProperty Name="order" ColumnName="order" />
+          <ScalarProperty Name="last_modified" ColumnName="last_modified" />
+          <ScalarProperty Name="meta_title" ColumnName="meta_title" />
+          <ScalarProperty Name="meta_keywords" ColumnName="meta_keywords" />
+          <ScalarProperty Name="meta_description" ColumnName="meta_description" />
+          <ScalarProperty Name="hidden" ColumnName="hidden" />
+          <ScalarProperty Name="chpu" ColumnName="chpu" />
+          <ScalarProperty Name="main" ColumnName="main" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="stores">
+      <EntityTypeMapping TypeName="awebstudio_watchModel.store">
+        <MappingFragment StoreEntitySet="store">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="productID" ColumnName="productID" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="color" ColumnName="color" />
+          <ScalarProperty Name="strap" ColumnName="strap" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="arrival_day" ColumnName="arrival_day" />
+          <ScalarProperty Name="arrival_month" ColumnName="arrival_month" />
+          <ScalarProperty Name="arrival_year" ColumnName="arrival_year" />
+          <ScalarProperty Name="defect" ColumnName="defect" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sub_section">
+      <EntityTypeMapping TypeName="awebstudio_watchModel.sub_section">
+        <MappingFragment StoreEntitySet="sub_section">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="id_section" ColumnName="id_section" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="title_in_menu" ColumnName="title_in_menu" />
+          <ScalarProperty Name="text" ColumnName="text" />
+          <ScalarProperty Name="order" ColumnName="order" />
+          <ScalarProperty Name="last_modified" ColumnName="last_modified" />
+          <ScalarProperty Name="meta_title" ColumnName="meta_title" />
+          <ScalarProperty Name="meta_keywords" ColumnName="meta_keywords" />
+          <ScalarProperty Name="meta_description" ColumnName="meta_description" />
+          <ScalarProperty Name="hidden" ColumnName="hidden" />
+          <ScalarProperty Name="chpu" ColumnName="chpu" />
+          <ScalarProperty Name="main" ColumnName="main" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
