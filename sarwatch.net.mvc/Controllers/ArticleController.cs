@@ -31,6 +31,7 @@ namespace SarwatchASPMVC.Controllers
         public ActionResult Delete(int id)
         {
             1
+                4
             return View();
         }
     }
