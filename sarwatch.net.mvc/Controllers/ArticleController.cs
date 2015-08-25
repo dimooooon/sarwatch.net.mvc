@@ -31,6 +31,7 @@ namespace SarwatchASPMVC.Controllers
         public ActionResult Delete(int id)
         {
             string s = "It is a new branch";
+            string smaster = "It is a master branch";
             return View();
         }
     }
