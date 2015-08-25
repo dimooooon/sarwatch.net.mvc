@@ -32,6 +32,7 @@ namespace SarwatchASPMVC.Controllers
         {
             string s = "It is a new branch";
             string smaster = "It is a master branch";
+			2
             return View();
         }
     }
