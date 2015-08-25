@@ -30,8 +30,7 @@ namespace SarwatchASPMVC.Controllers
         }
         public ActionResult Delete(int id)
         {
-            1
-                4
+            string s = "It is a new branch";
             return View();
         }
     }
